@@ -1,72 +1,82 @@
-#header{
-    background-color: black;
+#header {
+  background-color: black;
+  min-height: 100px ;
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-    height: 100px;
-  .logo{
-
-  }
-
-  .nav--bar {
-     ul {
-      display: flex;
-      justify-content: space-around;
-      gap: 0 20px;
-
-
-      li {
-        list-style-type: none;
-        color: white;
-        display: flex;
-        align-items: center;
-
-        a{
-            text-decoration: none;
-            color: white;
-          font-weight: 600;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  .nav--icons{
-    color: white;
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0 10px;
+    min-height: 100px;
+    flex-wrap: wrap;
 
-
-    .nav--icons__search{
-      font-size: 20px;
-      cursor: pointer;
+    .logo img {
+      max-width: 100%;
+      height: auto;
     }
-    div{
+
+    .nav--bar {
+      ul {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          list-style-type: none;
+          color: white;
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .nav--icons {
+      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 0 10px;
 
+      .nav--icons__search {
+        font-size: 20px;
+        cursor: pointer;
+      }
 
-      .countOfItems{
-        text-align: center;
-        background: green;
-        border-radius: 50% ;
-        width: 20px;
-        height: 20px;
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 10px;
+
+        .countOfItems {
+          text-align: center;
+          background: green;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+        }
       }
     }
+  }
 
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Stack items vertically */
+      height: auto; /* Adjust height as needed */
+      padding: 10px; /* Add padding for better spacing */
 
+      .nav--bar {
+        margin-top: 20px; /* Add spacing between logo and nav on small screens */
+      }
 
+      .nav--icons {
+        margin-top: 20px; /* Add spacing between nav and icons on small screens */
+      }
+    }
   }
 }
-
-
-}
-
-

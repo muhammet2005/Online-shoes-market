@@ -4,9 +4,7 @@ import ImageOfGuy from "../../../assets/img/guyPhoto.png"
 
 const Hero = () => {
     return (
-        <>
-
-            <div className="container">
+            <div id="header">
                 <div className="hero" style={{backgroundImage: `url(${ImageOfGuy})`}}>
                     <div className="hero--text">
                         <h1 className={"hero--text__title"}>Широкий <br/>
@@ -25,7 +23,6 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </>
     );
 };
 
